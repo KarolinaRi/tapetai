@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Reikiamų užsipirkti tapetų kiekio skaičiavimas</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+	<h1 styles="text-align: center" >Reikiamu uzsipirkti tapetu skaiciuokle</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 mt-5">
+				<div class="card">
+					<div class="card-header">Įveskite duomenis</div>
+					<div class="card-body">
+						<form method="post" action="/duom">
+							<div class="mb-3">
+								<!--  <label class="form-control" name="s_kiekis">Iveskite norimu tapetuoti sienu ismatavimus</label><br>
+								<span th:text="'Tapetuojamu sienu skaicius: ' + ${s_kiekis}" ></span>
+								<input name="s_kiekis"  th:value="*{s_kiekis}">-->
+								<label name="s_kiekis">Iveskite norimu tapetuoti sienu skaiciu</label>
+								<input type="number" name="s_kiekis" >
+								<table>
+									<th>Aukstis</th>
+									<th>Ilgis</th>
+								
+									<tr>
+										<td><input type="text" name="s_aukstis"></td>
+										<td><input type="text" name="s_ilgis"></td>
+									</tr>
+								</table>			
+							</div>
+							<div class="mb-3">
+								<!-- <label class="form-control" name="d_kiekis">Iveskite norimose tapetuoti sienose esanciu duru ismatavimus</label><br>
+								 <span th:text="'Tapetuojamose sienose esanciu duru skaicius: ' + ${d_kiekis}" ></span>
+								<input name="s_kiekis"  th:value="*{d_kiekis}">-->
+								<label name="d_kiekis">Iveskite tapetuojamose sienose esanciu duru skaiciu</label>
+								<input type="number" name="d_kiekis" ></br>
+								<table>
+									<th>Aukstis</th>
+									<th>Ilgis</th>
+								
+									<tr>
+										<td><input type="text" name="d_aukstis"></td>
+										<td><input type="text" name="d_ilgis"></td>
+									</tr>
+								</table>
+							</div>
+							<div class="mb-3">
+								<!-- <label class="form-control">Iveskite norimose tapetuoti sienose esanciu langu ismatavimus</label><br>
+								 <span th:text="'Tapetuojamose sienose esanciu langu skaicius: ' + ${l_kiekis}" ></span>
+								<input name="s_kiekis"  th:value="*{l_kiekis}">-->
+								<label name="l_kiekis">Iveskite tapetuojamose sienose esanciu langu skaiciu</label>
+								<input type="number" name="l_kiekis" >
+								<table>
+									<th>Aukstis</th>
+									<th>Ilgis</th>
+								
+									<tr>
+										<td><input type="text" name="l_aukstis"></td>
+										<td><input type="text" name="l_ilgis"></td>
+									</tr>
+								</table>
+							</div>
+							<button class="btn btn-success" type="submit">Ivesti</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>
