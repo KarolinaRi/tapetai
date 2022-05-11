@@ -6,31 +6,33 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
-<body>
-	<div class="container">
+<body style="background-color:#a8bace">
+	<div th:insert="fragments/navigation.html :: nav"></div>
+	<h1 class="text-center">Sveiki atvykę į tapetų skaičiuoklės sistemą! </h1>
+	<h1 class="text-center">Linkime Jums gero remonto :)</h1>
+	<div class="container justify-content-center">
 		<div class="row">
-			<div class="col-md-12 mt-5">
-				<div class="card">
-					<div class="card-header">Įveskite duomenis</div>
+			<div class="col-md-6 mt-5">
+				<div class="card text-center">
+					<div class="card-header text-center"> Tapetų skaičiuoklės sistemos paskirtis</div>
 					<div class="card-body">
-						<form method="post" action="/">
-							<div class="mb-3">
-								<label name="s_kiekis">Iveskite norimu tapetuoti sienu skaiciu</label>
-								<input type="number" name="s_kiekis" >
-							</div>
-							<div class="mb-3">
-								<label name="d_kiekis">Iveskite norimose tapetuoti sienose esanciu duru skaiciu</label>
-								<input type="number" name="d_kiekis" >
-							</div>
-							<div class="mb-3">
-								<label name="l_kiekis">Iveskite norimose tapetuoti sienose esanciu langu skaiciu</label>
-								<input type="number" name="l_kiekis" >
-							</div>
-							<button class="btn btn-success" type="submit">Ivesti</button>
+						Reikiamų užsipirkti tapetų kiekio skaičiuoklės sistemos paskirtis yra suvedus kambario sienų ir jose esančių langų bei durų matmenis gauti tikslų reikiamų tapetų kiekį, taip pat gauti reikiamų nusipirkti tapetų rulonų kiekį. Ši sistema yra naudinga, kai yra norima ištapetuoti kambarį, leisdama aiškiai sužinoti reikiamą tapetų kiekį. Tokiu būdu yra nusiperkamas tapetų kiekis nėra per mažas, o jų perteklius yra minimizuojamas.
+							
+			
 					</div>
 				</div>
 			</div>
-		</div>	
+			<div class="col-md-6 mt-5">
+				<div class="card text-center">
+					<div class="card-header text-center"> Tapetų skaičiuoklės sistema</div>
+					<div class="card-body">
+						Jei norite atlikti skaičiavimus paspauskite žemiau esantį mygtuką <br>
+						<a type="submit" class="btn btm-success" th:href="duom">Skaičiuoklė</a>
+					</div>
+					</div>
+				</div>				
+		</div>
 	</div>
+
 </body>
 </html>

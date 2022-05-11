@@ -4,13 +4,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/")
 public class HomeController {
+	
+	@GetMapping("/")
+	public String home() {
+		return "home";
+	}
+	
+	@PostMapping("/")
+	public String homee() {
+		return home();
+	}
 
 	@GetMapping("/duom")
-	public String home() {
+	public String skaiciavimai() {
 		return "res";
 	}
 	
@@ -25,16 +37,13 @@ public class HomeController {
 		double s_plotas = (s_ilgis*s_aukstis)*s_kiekis;
 		double d_plotas = (d_ilgis*d_aukstis)*d_kiekis;
 		double l_plotas = (l_ilgis*l_aukstis)*l_kiekis;
-		
 		double kiekis = s_plotas-d_plotas-l_plotas;
-		
 		double t_kiekis = kiekis / (t_ilgis*t_aukstis);
 		
 		model.addAttribute("kiekis", kiekis);
 		model.addAttribute("d_plotas", d_plotas);
 		model.addAttribute("l_plotas", l_plotas);
 		model.addAttribute("t_kiekis", t_kiekis);
-		
-		return "result";
+		return skaiciavimai();
 	}
 }

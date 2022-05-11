@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" >
+<meta charset="utf-8">
+
+<nav th:fragment="nav" class="navbar navbar-expand-lg navbar-light bg-light" style="background: #a8bae6;">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="#">Tapetų skaičiuoklė</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" th:classappend="${ #httpServletRequest.getRequestURI()=='/'?'active':'' }"  href="/">Pagrindinis puslapis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:classappend="${ #httpServletRequest.getRequestURI()=='/duom/'?'active':'' }" href="/duom/">Skaičiuoklė</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+</html>
