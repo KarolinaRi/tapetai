@@ -16,9 +16,6 @@
 					<div class="card-body">
 						<form method="post" action="/duom">
 							<div class="mb-3">
-								<!--  <label class="form-control" name="s_kiekis">Iveskite norimu tapetuoti sienu ismatavimus</label><br>
-								<span th:text="'Tapetuojamu sienu skaicius: ' + ${s_kiekis}" ></span>
-								<input name="s_kiekis"  th:value="*{s_kiekis}">-->
 								<label name="s_kiekis">Iveskite norimu tapetuoti sienu skaiciu</label>
 								<input type="number" name="s_kiekis" >
 								<table>
@@ -32,9 +29,6 @@
 								</table>			
 							</div>
 							<div class="mb-3">
-								<!-- <label class="form-control" name="d_kiekis">Iveskite norimose tapetuoti sienose esanciu duru ismatavimus</label><br>
-								 <span th:text="'Tapetuojamose sienose esanciu duru skaicius: ' + ${d_kiekis}" ></span>
-								<input name="s_kiekis"  th:value="*{d_kiekis}">-->
 								<label name="d_kiekis">Iveskite tapetuojamose sienose esanciu duru skaiciu</label>
 								<input type="number" name="d_kiekis" ></br>
 								<table>
@@ -60,6 +54,18 @@
 									<tr>
 										<td><input type="text" name="l_aukstis"></td>
 										<td><input type="text" name="l_ilgis"></td>
+									</tr>
+								</table>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Iveskite naudojamu tapetu rulono matmenis</label>								
+								<table>
+									<th>Aukstis</th>
+									<th>Ilgis</th>
+								
+									<tr>
+										<td><input type="text" name="t_aukstis" th:value="10.05"></td>
+										<td><input type="text" name="t_ilgis" th:value="0.53"></td>
 									</tr>
 								</table>
 							</div>

@@ -13,8 +13,11 @@
 				<div class="card">
 					<div class="card-header"> Suskaičiuotas reikiamų tapetų kiekis </div>
 					<div class="card-body">
-						<div th:if="${kiekis} != null">
-							<p th:text="'Reikiama kvadratūra: ' + ${kiekis}" />
+						<div >
+							Tapetuojamose sienose esanciu langu plotas: <span th:text="${l_plotas}"></span><br>
+							Tapetuojamose sienose esanciu duru plotas: <span th:text="${d_plotas}"></span><br>
+							Reikiamu tapetuoti sienu plotas: <span th:text="${kiekis}"></span><br>
+							Reikiamu rulonu kiekis: <span th:text="${t_kiekis}"></span>
 						</div>
 					</div>
 				</div>
