@@ -6,9 +6,19 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
-<body style="background-color:#a8bace">
+<style>
+body{
+	background-image: url('image/55_1.jpg');
+	background-size: 100% 100%;
+	height: 100vh;
+}
+h1{
+	color: white;
+}
+</style>
+<body>
 	<div th:insert="fragments/navigation.html :: nav"></div>
-	<h1 class="text-center" >Reikiamų užsipirkti tapetų kiekio skaičiuoklė</h1>
+	<h1 class="text-center" ><b>Reikiamų užsipirkti tapetų kiekio skaičiuoklė</b></h1>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 mt-5">
@@ -18,42 +28,39 @@
 						<form method="post" action="/duom">
 							<div class="mb-3">
 								<label name="s_kiekis">Įveskite norimų tapetuoti sienų skaičių</label>
-								<input type="number" name="s_kiekis" >
+								<input type="number" name="s_kiekis" maxlength="4" size="4">
 								<table>
 									<th>Aukštis</th>
 									<th>Ilgis</th>
-								
 									<tr>
-										<td><input type="text" name="s_aukstis"></td>
-										<td><input type="text" name="s_ilgis"></td>
+										<td><input type="text" name="s_aukstis" maxlength="16" size="16"></td>
+										<td><input type="text" name="s_ilgis" maxlength="16" size="16"></td>
 									</tr>
 								</table>			
 							</div>
 							<hr/>
 							<div class="mb-3">
 								<label name="d_kiekis">Įveskite tapetuojamose sienose esančių durų skaičių</label>
-								<input type="number" name="d_kiekis" ><br>
+								<input type="number" name="d_kiekis" maxlength="4" size="4"><br>
 								<table>
 									<th>Aukštis</th>
 									<th>Ilgis</th>
-								
 									<tr>
-										<td><input type="text" name="d_aukstis"></td>
-										<td><input type="text" name="d_ilgis"></td>
+										<td><input type="text" name="d_aukstis" maxlength="16" size="16"></td>
+										<td><input type="text" name="d_ilgis" maxlength="16" size="16"></td>
 									</tr>
 								</table>
 							</div>
 							<hr/>
 							<div class="mb-3">
 								<label name="l_kiekis">Įveskite tapetuojamose sienose esančių langų skaičių</label>
-								<input type="number" name="l_kiekis">
+								<input type="number" name="l_kiekis" maxlength="4" size="4">
 								<table>
 									<th>Aukštis</th>
 									<th>Ilgis</th>
-								
 									<tr>
-										<td><input type="text" name="l_aukstis"></td>
-										<td><input type="text" name="l_ilgis"></td>
+										<td><input type="text" name="l_aukstis" maxlength="16" size="16"></td>
+										<td><input type="text" name="l_ilgis" maxlength="16" size="16"></td>
 									</tr>
 								</table>
 							</div>
@@ -63,14 +70,13 @@
 								<table>
 									<th>Aukštis</th>
 									<th>Ilgis</th>
-								
 									<tr>
-										<td><input type="text" name="t_aukstis" th:value="10.05"></td>
-										<td><input type="text" name="t_ilgis" th:value="0.53"></td>
+										<td><input type="text" name="t_aukstis" th:value="10.05" maxlength="16" size="16"></td>
+										<td><input type="text" name="t_ilgis" th:value="0.53" maxlength="16" size="16"></td>
 									</tr>
 								</table>
 							</div>
-							<button class="btn btn-success" type="submit">Įvesti</button>
+							<button class="btn btn-secondary" type="submit">Skaičiuoti</button>
 						</form>
 					</div>
 				</div>
@@ -86,7 +92,7 @@
 							Reikiamų rulonų kiekis: <span th:text="${t_kiekis}"></span>
 						</div>
 						<div th:if="${kiekis} == null" class = "alert alert-danger">
-							Įveskite duomenis ir paspauskite mygtuką „Įvesti“
+							Įveskite duomenis ir paspauskite mygtuką „Skaičiuoti“
 						</div>
 					</div>
 				</div>
